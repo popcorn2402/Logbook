@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import com.ar.logbook.model.dao.DailyLogDAO;
 import com.ar.logbook.model.entity.DailyLog;
 
+import java.sql.Date;
 import java.util.List;
 
 class DailyLogRepository {
@@ -27,6 +28,12 @@ class DailyLogRepository {
     void insert(DailyLog dailyLog) {
         DailyLogRoomDatabase.databaseWriteExecutor.execute(() -> {
             mDailyLogDao.insert(dailyLog);
+        });
+    }
+
+    void deleteByDate(Date date) {
+        DailyLogRoomDatabase.databaseWriteExecutor.execute(() -> {
+            mDailyLogDao.deleteByDate(date);
         });
     }
 }
