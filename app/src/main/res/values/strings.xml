@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Logbook</string>
+    <string name="add_dailylog">add your daily log</string>
 </resources>
