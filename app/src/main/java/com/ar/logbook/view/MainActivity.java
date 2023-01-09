@@ -1,8 +1,10 @@
-package com.ar.logbook;
+package com.ar.logbook.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.ar.logbook.R;
 
 public class MainActivity extends AppCompatActivity {
 

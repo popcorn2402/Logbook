@@ -1,9 +1,9 @@
-package com.ar.logbook;
+package com.ar.logbook.model.entity;
 
 import androidx.annotation.NonNull;
 
 import java.io.File;
-import java.util.Date;
+import java.sql.Date;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
