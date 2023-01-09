@@ -2,7 +2,6 @@ package com.ar.logbook.model.entity;
 
 import androidx.annotation.NonNull;
 
-import java.io.File;
 import java.sql.Date;
 
 import androidx.room.ColumnInfo;
@@ -29,16 +28,12 @@ public class DailyLog {
     @ColumnInfo(name = "notes")
     private String notes;
 
-    @ColumnInfo(name = "photos")
-    private File photo;
-
-    public DailyLog(String title, @NonNull Date date, int mood, int energy, String notes, File photo) {
+    public DailyLog(String title, @NonNull Date date, int mood, int energy, String notes) {
         this.title = title;
         this.date = date;
         this.mood = mood;
         this.energy = energy;
         this.notes = notes;
-        this.photo = photo;
     }
 
     public String getTitle() {
@@ -81,11 +76,4 @@ public class DailyLog {
         this.notes = notes;
     }
 
-    public File getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(File photo) {
-        this.photo = photo;
-    }
 }

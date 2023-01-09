@@ -5,7 +5,9 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
+import com.ar.logbook.model.Converters;
 import com.ar.logbook.model.dao.DailyLogDAO;
 import com.ar.logbook.model.entity.DailyLog;
 
@@ -13,6 +15,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {DailyLog.class}, version = 1, exportSchema = false)
+@TypeConverters({Converters.class})
 public abstract class DailyLogRoomDatabase extends RoomDatabase {
 
     public abstract DailyLogDAO dailyLogDAO();
